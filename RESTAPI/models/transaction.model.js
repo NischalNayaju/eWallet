@@ -21,6 +21,14 @@ const transactionSchema = new mongoose.Schema({
       default: 0,
       required: true,
     },
+    merchantId :{
+      type: String,
+      required:true,
+    },
+    customerId :{
+      type:String,
+      required:true,
+    },
     reference: {
       type: String,
     },
