@@ -22,4 +22,12 @@ router.post('/deposit',verify, async (req,res,next)=>{
 
 
 });
+
+router.post('/transfer_wallet', (req,res,next)=>{
+if(req.body.amount==Customer.amount){
+  console.log('true');
+}
+
+
+})
 module.exports=router;
