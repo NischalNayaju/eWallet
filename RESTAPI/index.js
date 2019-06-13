@@ -10,6 +10,8 @@ const postRoute = require('./routes/post');
 const walletRoute = require('./routes/ewalletRoutes');
 
 
+
+
 //app.set('view engine', pug);
 dotenv.config();
 //Connect to db
@@ -26,7 +28,7 @@ app.use(bodyParser.json());
 //Creating routes middleware
 app.use('/api/googi/v1',authRoute); 
 app.use('/api/googi/v1',postRoute);
-app.use('/wallet',walletRoute);
+app.use('/api/googi/v1',walletRoute);
 /* app.use(app.router);
 authRoute.initialize(app);
 postRoute.initialize(app);
