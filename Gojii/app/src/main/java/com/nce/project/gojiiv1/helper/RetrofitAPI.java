@@ -1,29 +1,24 @@
 package com.nce.project.gojiiv1.helper;
 
 import retrofit2.Retrofit;
+import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
+import retrofit2.converter.scalars.ScalarsConverterFactory;
 
 public class RetrofitAPI {
-    public static final String BASE_URL = "http://10.0.10.116:3000/v1/";
-    private static Retrofit retrofit;
-    private static RetrofitAPI mInstance;
 
-    private RetrofitAPI(){
-        retrofit = new Retrofit.Builder()
-                .baseUrl(BASE_URL)
-                .addConverterFactory(GsonConverterFactory.create())
-                .build();
+    public static Retrofit instance;
+
+    public static Retrofit getInstance(){
+
+        if(instance==null)
+            instance = new Retrofit.Builder()
+                    .baseUrl("http://192.168.137.197:3000/")
+                    .addConverterFactory(ScalarsConverterFactory.create())
+                    .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+                    .build();
+        return instance;
     }
 
-    public static  synchronized RetrofitAPI getInstance(){
-        if (mInstance == null){
-            mInstance = new RetrofitAPI();
-        }
-        return mInstance;
-    }
-
-    public Api getApi (){
-        return retrofit.create(Api.class);
-    }
 
 }

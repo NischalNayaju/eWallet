@@ -22,7 +22,7 @@ const paystack = (request) => {
         const options = {
             url : 'https://api.paystack.co/transaction/verify/'+encodeURIComponent(ref),
             headers : {
-                authorization: MySecretKey,
+                'authorization': MySecretKey,
                 'content-type': 'application/json',
                 'cache-control': 'no-cache'    
             }

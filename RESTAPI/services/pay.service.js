@@ -18,7 +18,7 @@ const gatewayResponse = await simulateGateWayCall(card, amount);
 const gatewayTransaction = new GatewayTransaction (gatewayResponse);
 const savedGatewayTransaction = await gatewayTransaction.save();
 
-if(savedGatewayTransaction.status==='failure'){
+if(savedGatewayTransaction.status=='failure'){
     throw new APIError({
         message:"Payment Rejected",
         status: httpStatus.PAYMENT_REQUIRED
