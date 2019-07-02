@@ -3,25 +3,11 @@ package com.nce.project.gojiiv1.helper;
 import java.sql.Timestamp;
 
 public class User {
-    private String id,email,role;
-    private String tokenType;
-    private String accessToken;
+    private String id,email,role,name;
+   private String balance,phone,password;
+    private String accessToken,socialId;
     private Timestamp createdAt;
 
-    public User(Timestamp createdAt, Timestamp expiresIn) {
-        this.createdAt = createdAt;
-        this.expiresIn = expiresIn;
-    }
-
-    private Timestamp expiresIn;
-
-    public User(String tokenType, String accessToken, String refreshToken) {
-        this.tokenType = tokenType;
-        this.accessToken = accessToken;
-        this.refreshToken = refreshToken;
-    }
-
-    private String refreshToken;
     public String getId() {
         return id;
     }
@@ -46,30 +32,36 @@ public class User {
         this.role = role;
     }
 
-
-
-    public Integer getAccountNumber() {
-        return accountNumber;
+    public String getName() {
+        return name;
     }
 
-    public void setAccountNumber(Integer accountNumber) {
-        this.accountNumber = accountNumber;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public User(String id, String email, String role,Integer accountNumber) {
-        this.id = id;
-        this.email = email;
-        this.role = role;
-
-        this.accountNumber = accountNumber;
+    public String getBalance() {
+        return balance;
     }
 
-    public String getTokenType() {
-        return tokenType;
+    public void setBalance(String balance) {
+        this.balance = balance;
     }
 
-    public void setTokenType(String tokenType) {
-        this.tokenType = tokenType;
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String getAccessToken() {
@@ -80,6 +72,14 @@ public class User {
         this.accessToken = accessToken;
     }
 
+    public String getSocialId() {
+        return socialId;
+    }
+
+    public void setSocialId(String socialId) {
+        this.socialId = socialId;
+    }
+
     public Timestamp getCreatedAt() {
         return createdAt;
     }
@@ -88,21 +88,16 @@ public class User {
         this.createdAt = createdAt;
     }
 
-    public Timestamp getExpiresIn() {
-        return expiresIn;
+    public User(String id, String email, String role, String name, String balance, String phone, String password, String accessToken, String socialId, Timestamp createdAt) {
+        this.id = id;
+        this.email = email;
+        this.role = role;
+        this.name = name;
+        this.balance = balance;
+        this.phone = phone;
+        this.password = password;
+        this.accessToken = accessToken;
+        this.socialId = socialId;
+        this.createdAt = createdAt;
     }
-
-    public void setExpiresIn(Timestamp expiresIn) {
-        this.expiresIn = expiresIn;
-    }
-
-    public String getRefreshToken() {
-        return refreshToken;
-    }
-
-    public void setRefreshToken(String refreshToken) {
-        this.refreshToken = refreshToken;
-    }
-
-    private Integer accountNumber;
 }
