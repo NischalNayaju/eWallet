@@ -13,10 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".UPay.GasStationPay"></activity>
-        <activity android:name=".UPay.CabPay" >
-
-        </activity>
+        <activity android:name=".HomePageActivity"></activity>
+        <activity android:name=".UPay.GasStationPay" />
+        <activity android:name=".UPay.CabPay"></activity>
         <activity android:name=".UPay.Transfer" />
         <activity android:name=".UPay.LoadFund" />
         <activity android:name=".Authentication.FingerPrintActivity" />
@@ -27,10 +26,8 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
         <activity android:name=".MainActivity" />
-
     </application>
 
 </manifest>

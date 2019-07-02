@@ -1,5 +1,6 @@
 package com.nce.project.gojiiv1.Authentication;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
@@ -8,6 +9,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.nce.project.gojiiv1.HomePageActivity;
+import com.nce.project.gojiiv1.MainActivity;
 import com.nce.project.gojiiv1.R;
 import com.nce.project.gojiiv1.helper.Api;
 import com.nce.project.gojiiv1.helper.RetrofitAPI;
@@ -71,6 +74,7 @@ public class LoginActivity extends AppCompatActivity {
                     @Override
                     public void accept(String response) throws Exception {
                         Toast.makeText(LoginActivity.this, "" + response, Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(LoginActivity.this, HomePageActivity.class));
                     }
                 }));
 
