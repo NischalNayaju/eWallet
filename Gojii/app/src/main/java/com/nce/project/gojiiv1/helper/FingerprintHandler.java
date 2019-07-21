@@ -3,6 +3,7 @@ package com.nce.project.gojiiv1.helper;
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.hardware.biometrics.BiometricPrompt;
 import android.hardware.fingerprint.FingerprintManager;
 import android.os.Build;
@@ -11,6 +12,7 @@ import android.support.v4.content.ContextCompat;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.nce.project.gojiiv1.HomePageActivity;
 import com.nce.project.gojiiv1.R;
 
 @TargetApi(Build.VERSION_CODES.M)
@@ -53,6 +55,8 @@ public class FingerprintHandler extends FingerprintManager.AuthenticationCallbac
     public void onAuthenticationSucceeded(FingerprintManager.AuthenticationResult result) {
 
         this.update("You can now access the app", true);
+        Intent  intent = new Intent(context, HomePageActivity.class);
+        context.startActivity(intent);
     }
 
     private void update(String s, boolean b) {
