@@ -13,8 +13,8 @@ public class RetrofitAPI {
 
         if(instance==null)
             instance = new Retrofit.Builder()
-                    .baseUrl("http://192.168.1.237:3000/")
-                    .addConverterFactory(ScalarsConverterFactory.create())
+                    .baseUrl("http://192.168.43.20:3000/")
+                    .addConverterFactory(GsonConverterFactory.create())
                     .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                     .build();
         return instance;

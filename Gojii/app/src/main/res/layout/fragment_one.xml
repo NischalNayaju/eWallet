@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:columnCount="4"
+    android:rowCount="4"
+    android:id="@+id/frag_one"
+
+
+    >
+
+  <ImageButton
+      android:src="@mipmap/f"
+      android:background="@android:color/transparent"
+      android:layout_margin="20dp"
+      android:layout_width="50dp"
+      android:layout_height="50dp"
+      android:scaleType="fitXY"
+      android:id="@+id/loadfund"
+      android:clickable="true"
+      android:tooltipText="Load Fund"
+
+
+
+      />
+
+    <ImageButton
+        android:src="@mipmap/ll"
+        android:background="@android:color/transparent"
+        android:layout_margin="20dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:scaleType="fitXY"
+        android:id="@+id/flight"
+        android:clickable="true"
+        />
+
+    <ImageButton
+        android:src="@mipmap/aa"
+        android:background="@android:color/transparent"
+        android:layout_margin="20dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:scaleType="fitXY"
+        android:clickable="true"
+
+        />
+
+    <ImageButton
+        android:src="@mipmap/p"
+        android:background="@android:color/transparent"
+        android:layout_margin="20dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:scaleType="fitXY"
+        android:clickable="true"
+
+        />
+
+    <ImageButton
+        android:src="@mipmap/i"
+        android:background="@android:color/transparent"
+        android:layout_margin="20dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:scaleType="fitXY"
+        android:clickable="true"
+
+        />
+
+    <ImageButton
+        android:src="@mipmap/mm"
+        android:background="@android:color/transparent"
+        android:layout_margin="20dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:scaleType="fitXY"
+        android:clickable="true"
+
+        />
+
+    <ImageButton
+        android:src="@mipmap/ff"
+        android:background="@android:color/transparent"
+        android:layout_margin="20dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:scaleType="fitXY"
+        android:clickable="true"
+
+        />
+
+    <ImageButton
+        android:src="@mipmap/ee"
+        android:background="@android:color/transparent"
+        android:layout_margin="20dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:scaleType="fitXY"
+        android:clickable="true"
+
+        />
+
+    <ImageButton
+        android:src="@mipmap/ss"
+        android:background="@android:color/transparent"
+        android:layout_margin="20dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:scaleType="fitXY"
+        android:clickable="true"
+        />
+  <ImageButton
+      android:src="@mipmap/o"
+      android:background="@android:color/transparent"
+      android:layout_margin="20dp"
+      android:layout_width="50dp"
+      android:layout_height="50dp"
+      android:scaleType="fitXY"
+      android:clickable="true"
+
+
+      />
+
+  <ImageButton
+      android:src="@mipmap/l"
+      android:background="@android:color/transparent"
+      android:layout_margin="20dp"
+      android:layout_width="50dp"
+      android:layout_height="50dp"
+      android:scaleType="fitXY"
+      android:clickable="true"
+
+      />
+
+  <ImageButton
+      android:src="@mipmap/kk"
+      android:background="@android:color/transparent"
+      android:layout_margin="20dp"
+      android:layout_width="50dp"
+      android:layout_height="50dp"
+      android:scaleType="fitXY"
+      android:clickable="true"
+      />
+
+
+</GridLayout>

@@ -3,20 +3,20 @@ package com.nce.project.gojiiv1.helper;
 import com.google.gson.annotations.SerializedName;
 
 public class DefaultResponse {
-    @SerializedName("error")
-    private  boolean err;
+    @SerializedName("code")
+    private  boolean code;
 
     @SerializedName("message")
     private String msg;
 
-    public DefaultResponse(boolean err, String msg) {
-        this.err = err;
+    public DefaultResponse(boolean code, String msg) {
+        this.code = code;
         this.msg = msg;
     }
 
 
-    public boolean isErr() {
-        return err;
+    public boolean iscode() {
+        return code;
     }
 
     public String getMsg() {

@@ -2,6 +2,7 @@ package com.nce.project.gojiiv1.Authentication;
 
 import android.Manifest;
 import android.app.KeyguardManager;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.hardware.fingerprint.FingerprintManager;
 import android.os.Build;
@@ -12,8 +13,13 @@ import android.security.keystore.KeyProperties;
 import android.support.annotation.RequiresApi;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.nce.project.gojiiv1.HomePageActivity;
 import com.nce.project.gojiiv1.R;
 import com.nce.project.gojiiv1.helper.FingerprintHandler;
 import java.io.IOException;
@@ -39,7 +45,7 @@ public class FingerPrintActivity extends AppCompatActivity {
     private KeyStore keyStore;
     private KeyGenerator keyGenerator;
     private Cipher cipher;
-
+private Button skipBtn;
     private TextView mheadingLabel;
     private ImageView mfingerprintimage;
     private TextView mparaLabel;
@@ -54,7 +60,24 @@ public class FingerPrintActivity extends AppCompatActivity {
         mheadingLabel = (TextView) findViewById(R.id.headingLabel);
         mfingerprintimage = (ImageView) findViewById(R.id.fingerprintimage);
         mparaLabel= (TextView) findViewById(R.id.paraLabel);
+        skipBtn=findViewById(R.id.skip);
 
+        skipBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Intent inte= getIntent();
+                //Bundle bundle = inte.getExtras();
+
+
+
+
+                Intent intent= new Intent(FingerPrintActivity.this, HomePageActivity.class);
+              //  intent.putExtras(bundle);
+
+                startActivity(intent);
+                finish();
+            }
+        });
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             keyguardManager = (KeyguardManager) getSystemService(KEYGUARD_SERVICE);
             fingerprintManager = (FingerprintManager) getSystemService(FINGERPRINT_SERVICE);
