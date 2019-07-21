@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/grey"
+    android:background="#ffffff"
     android:elevation="0sp"
     android:orientation="vertical"
     tools:context=".Authentication.LoginActivity">
@@ -16,8 +16,8 @@
         android:layout_height="150dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="55dp"
+        android:src="@drawable/walletnew"
         android:scaleType="centerInside"
-        android:src="@drawable/wallet2"
         android:contentDescription="@string/logo" />
 
     <EditText
@@ -75,7 +75,7 @@
             android:textSize="14sp" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/signUp"
             android:layout_width="134dp"
             android:layout_height="match_parent"
             android:layout_alignParentEnd="true"
@@ -85,7 +85,7 @@
             android:background="@null"
 
             android:gravity="center"
-            android:text="@string/forget_password"
+            android:text="@string/sign_up"
             android:textAllCaps="false"
             android:textColor="@color/green"
             android:textSize="12sp" />
