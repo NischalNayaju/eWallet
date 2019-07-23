@@ -15,6 +15,7 @@ import com.nce.project.gojiiv1.HomePageActivity;
 import com.nce.project.gojiiv1.R;
 import com.nce.project.gojiiv1.helper.Api;
 import com.nce.project.gojiiv1.helper.RetrofitAPI;
+import com.nce.project.gojiiv1.security.TripleKeyDES;
 
 import org.json.JSONObject;
 
@@ -28,6 +29,7 @@ public class SignupActivity extends AppCompatActivity {
 
     private static CompositeDisposable disposable = new CompositeDisposable();
     private ProgressDialog dialog;
+    private TripleKeyDES tripleKeyDES;
     EditText username, email ,phonenumber, password, confirmpassword ;
     Button proceed ;
     Api api;
@@ -59,9 +61,10 @@ public class SignupActivity extends AppCompatActivity {
                 String emailvalue = email.getText().toString();
                 String phonenumberValue = phonenumber.getText().toString();
                 String passwordValue = password.getText().toString();
+                String encryptedPassword = tripleKeyDES.harden(passwordValue);
                 String confirmpasswordValue = confirmpassword.getText().toString();
 
-                signUp(usernameValue,emailvalue,passwordValue);
+                signUp(usernameValue,emailvalue,encryptedPassword);
                 dialog.show();
 
 
