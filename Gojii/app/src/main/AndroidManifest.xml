@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-
     package="com.nce.project.gojiiv1">
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -13,15 +12,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/MyMaterialTheme"
-        android:usesCleartextTraffic="true"
-        >
-        <activity android:name=".transaction_log"></activity>
-        <activity android:name=".HomePageActivity">
+        android:usesCleartextTraffic="true">
+        <activity android:name=".UPay.electricity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".transaction_log" />
+        <activity android:name=".HomePageActivity">
+
         </activity>
         <activity android:name=".UPay.GasStationPay" />
         <activity android:name=".UPay.CabPay" />
@@ -29,10 +30,9 @@
         <activity android:name=".UPay.LoadFund" />
         <activity android:name=".Authentication.FingerPrintActivity" />
         <activity android:name=".Authentication.SignupActivity" />
-        <activity android:name=".Authentication.LoginActivity">
-
-        </activity>
+        <activity android:name=".Authentication.LoginActivity"></activity>
         <activity android:name=".MainActivity" />
+
     </application>
 
 </manifest>

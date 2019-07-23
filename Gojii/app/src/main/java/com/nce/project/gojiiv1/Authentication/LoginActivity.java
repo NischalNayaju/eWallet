@@ -5,6 +5,7 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.icu.text.StringPrepParseException;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
@@ -19,6 +20,7 @@ import com.nce.project.gojiiv1.HomePageActivity;
 import com.nce.project.gojiiv1.R;
 import com.nce.project.gojiiv1.helper.Api;
 import com.nce.project.gojiiv1.helper.RetrofitAPI;
+import com.nce.project.gojiiv1.security.TripleKeyDES;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -40,6 +42,7 @@ public class LoginActivity extends AppCompatActivity {
     private static EditText emailEditText, passwordEditText;
     private static Button loginBtn, signUpbtn;
     private static CompositeDisposable compositeDisposable = new CompositeDisposable();
+    private TripleKeyDES tripleKeyDES;
     Api api;
     private ProgressDialog dialog;
 
@@ -70,8 +73,8 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String email = emailEditText.getText().toString().trim();
                 String password = passwordEditText.getText().toString().trim();
-
-                loginUser(email, password);
+                String encryptedPassword = tripleKeyDES.harden(password);
+                loginUser(email, encryptedPassword);
             }
         });
 
